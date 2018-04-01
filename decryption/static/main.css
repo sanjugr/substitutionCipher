@@ -1,25 +1,24 @@
 html, body {
 height: 100%;
-margin : 0;
+background-color: #006666;
 }
 
 .container {
 margin : 0 auto;
 width: 100%;
 height: 100%;
-background-color: #006666;
 color: #e6ffff;
 text-align: center;
 }
 
 .container h1{
 text-align: center;
-color : #DDCCEE;
+color : #F0FFFF
 }
 
 .container h2{
 text-align: center;
-color :  black;
+color : #87CEFA
 }
 
 .container h3{

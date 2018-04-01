@@ -164,6 +164,7 @@ def index():
 def decryptText():
     if request.method =="POST":
         cipherText= request.form["cipherText_input"]
+        cipherText = re.sub("[^a-zA-Z]+", "", cipherText)
         initialKey = getFirstKey(cipherText)
         print("\n\rThe first Key generated from analyzing the cipher text : ")
         print(initialKey)
