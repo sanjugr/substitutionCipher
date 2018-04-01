@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <title>Encryption</title>
+  <head>
+    <link href = "../static/main.css" rel="stylesheet">
+  </head>
+    <body>
+      <div class = "container">
+        <h1>Encryption</h1>
+        <h2>please enter your plain text & key below</h2>
+        <form action = "{{url_for('encryptText')}}" method="POST">
+          <input class = "plainTextInput" title ="plain text " placeholder = "enter your plain text here" type = "text" name = "plainText_input"><br>
+          <input class = "keyInput" title ="key " placeholder = "enter your key here "type = "text" name = "key_input"><br>
+          <button class = "btn_submit" type ="submit" >encrypt</button>
+        </form>
+
+      </div>
+    </body>
+</html>

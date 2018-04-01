@@ -1,0 +1,60 @@
+html, body {
+height: 100%;
+margin : 0;
+overflow-x: hidden;
+overflow-y: hidden;
+}
+
+.container {
+margin : 0 auto;
+width: 100%;
+height: 100%;
+background-color: #006666;
+color: #e6ffff;
+text-align: center;
+overflow-x: hidden;
+overflow-y: hidden;
+}
+
+
+.container h1{
+text-align: center;
+color : #DDCCEE;
+}
+
+.container h3{
+text-align: center;
+color : #DDCCEE;
+}
+
+.plainTextInput {
+width: 800px;
+height: 40px;
+length: 500px;
+margin-left: auto;
+list-style: initial;
+}
+
+.keyInput {
+  width: 800px;
+  height: 40px;
+  length: 500px;
+margin-left: auto;
+margin-top: 10px;
+list-style: initial;
+margin-bottom: 10px;
+}
+
+.container button{
+  width: 70px;
+  height: 30px;
+  margin-left: auto;
+  margin-top: 10px;
+  background-color: steelblue;
+}
+
+.container span {
+    display:block;
+    width:150px;
+    word-wrap:break-word;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <title>Decryption</title>
+  <head>
+    <link href = "../static/main2.css" rel="stylesheet">
+  </head>
+    <body>
+      <div class = "container">
+        <h1>Decryption</h1>
+        <h2>please enter your cipher Text to decrypt</h2>
+        <form action = "{{url_for('decryptText')}}" method="POST">
+          <input class = "cipherTextinput" title ="Cipher Text " placeholder = "enter your cipher text here" type = "text" name = "cipherText_input"><br>
+          <button class = "btn_submit" type ="submit" >Decrypt</button>
+        </form>
+
+      </div>
+    </body>
+</html>
