@@ -11,7 +11,7 @@ def getCipherText(filename):
     return cipherText.lower()
 
 
-##---------- Below function is used to get the initial putative key to convert  cipher text to initial plaintext----------##
+##---------- To get the initial putative key by analyzing the frequency in cipher text----------##
 def getFirstKey(cipherText):
     frequencyOfCipherArray = [0 for x in range(rowLen)]
     newKey = [0 for x in range(rowLen)]
@@ -33,7 +33,7 @@ def getFirstKey(cipherText):
     return "".join(newKey)
 
 
-##-----------elow function converts the cipher text into initial plain text with the key generated from above function-------##
+##----------- converts the cipher text into initial plain text with the key generated from above function-------##
 def getInitialPlainText(message, key=None):
     newPlainList = []
     for char in message:
@@ -41,7 +41,7 @@ def getInitialPlainText(message, key=None):
     return "".join(newPlainList)             #Returning the initial plain text corresponding to the cipher text
 
 
-#This below function returns the diagram frequency matrix numbers for any text string as input.
+#---------This below function returns the diagram frequency matrix numbers for any text string as input----##.
 def getDiagramFrequency(plainText):
     diagramMatrix = [[0 for x in range(rowLen)] for y in range(colLen)]  #matrix for storing the diagram of particular language
     diagramFrequencyMatrix = [[0 for x in range(rowLen)] for y in range(colLen)]
@@ -55,8 +55,6 @@ def getDiagramFrequency(plainText):
             diagramMatrix[i][j]= "".join(newArray) # initializing the initial diagram frequency matrix
             a = plainText.count(diagramMatrix[i][j])
             diagramFrequencyMatrix[i][j] = a
-    #print(diagramMatrix)
-    #print(diagramFrequencyMatrix)
     for i in range(0,rowLen):
         for j in range(0,colLen):
 	        diagramFrequencyMatrix[i][j]=round(diagramFrequencyMatrix[i][j]/ float(value))
@@ -103,7 +101,7 @@ def copyMatrixValues(inputMatrix):
             matrixCopy[i][j] = inputMatrix[i][j]
     return matrixCopy
 
-##----------the below fuction is to compute the iterations and get the final key for the plain text----------------##
+##----------The below fuction is to compute the iterations and get the final key for the plain text----------------##
 def getFinalKey(D, key):
     score = getScore(D)
     for k in range(0, 5):
@@ -126,7 +124,7 @@ def decrypt(cipher, key=None):
             newDecryptedList.append(numberSpace[key.index(char)])
         return "".join(newDecryptedList)
 
-#######---------------------------------MAIN FUNCTION---------------------------######################3
+#######---------------------------------MAIN FUNCTION(Can be used if we are getting the input cipher text from a text file)---------------------------######################3
 def main():
     cipherText = getCipherText("cipher3.txt")
     #cipherText = getCipherText("cipher2.txt")
@@ -152,7 +150,7 @@ def main():
     print(decrypt(cipherText, finalKey))
 
 
-#----the below function is written for mapping the back end code to front end--------
+#----Main Function(To be used if the input is taken from a webpage)--------##
 
 app = Flask(__name__)
 

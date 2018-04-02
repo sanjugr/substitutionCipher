@@ -4,8 +4,8 @@ numberSpaceList = list(numberSpace)
 rowLen = 26
 colLen = 26
 SenLength = 10000
-s = "ETAOINSHRDLCUMWFGYPBVKJXQZ"
-englishFrequency=s.lower()
+englishFrequency= "ETAOINSHRDLCUMWFGYPBVKJXQZ"
+englishFrequency= englishFrequency.lower()
 
 
 #Source: http://jnicholl.org/Cryptanalysis/Data/EnglishData.php

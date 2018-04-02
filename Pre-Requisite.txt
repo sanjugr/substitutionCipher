@@ -1,0 +1,15 @@
+
+Pre-Requsite:
+#install python 3 - download from python.org
+#install flask "pip install Flask" - from cmd window
+
+NOTE:
+#Use only to encrypt simple substitution cipher
+# only 26 english letters are acceptable for encryption 
+
+Programs:
+Encryption:- This program takes a plain text and a 26 letter key as input and generates a cipher text as output
+#Click on run.bat file to execute the program and launch the webpage to give user inputs
+
+Decryption:-This program takes only Cipher Text as input and generates a key and plain text
+#Click on run.bat file to execute the program and launch the webpage to give user inputs
