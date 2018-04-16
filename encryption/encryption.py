@@ -20,9 +20,13 @@ def encrypt(message, key=None):
         random.shuffle(numberSpaceList)
         key = "".join(numberSpaceList)
     newCipherList = []
-    for char in message:
-        newCipherList.append(key[numberSpace.index(char)]) # Appending the ciphered text into the new list
-    return ["".join(newCipherList), key]
+    try:
+        for char in message:
+            newCipherList.append(key[numberSpace.index(char)]) # Appending the ciphered text into the new list
+        return ["".join(newCipherList), key]
+    except:
+        return ["Key Error: -PLease make sure you have entered all 26 letters in key",key]
+
 
 def decrypt(cipher, key=None):
     if key is not None:
